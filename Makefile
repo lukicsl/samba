@@ -18,7 +18,7 @@ all: docker-image docker-image-push
 
 docker-image:
 	@echo -e "$(OK_COLOR)==> Docker build image : ${PLUGIN_IMAGE} $(NO_COLOR)"
-	cd ./1.2 && docker build -t ${PLUGIN_IMAGE} -f ${DOCKERFILE} .
+	docker build -t ${PLUGIN_IMAGE} -f ${DOCKERFILE} .
 
 docker-image-push:
 	@echo -e "$(OK_COLOR)==> push : ${PLUGIN_IMAGE}$(NO_COLOR)"
